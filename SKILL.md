@@ -3,7 +3,7 @@ name: kiddo-doodle-alive
 description: Use when a user wants to turn a child's doodle or craft photo into a minimalist cream-paper remake and a short living animation, with naive line preserved, optional name caption, and originals never overwritten.
 license: MIT-0
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   homepage: https://github.com/JWu527/kiddo-doodle-alive
 ---
 
@@ -35,7 +35,7 @@ metadata:
 2. **选配方**：默认走 `references/style-recipe.md` 的「极简奶油纸」配方。用户只要静帧就停在第 4 步；要动效再进第 5 步。
 3. **静帧提示词**：按 `references/still-prompt.md` 组装生成提示，把原图路径放进 reference；画幅优先跟原图接近（常见 4:3）。
 4. **交付静帧**：给用户预览；写明实际像素；另存文件，例如 `Lulu_彩虹_童画活起来.jpg`。用户不满意就按反馈改提示再出，不要直接跳到视频。
-5. **动效**：用户确认静帧后，按 `references/motion-prompt.md` 做 6–12 秒短视频（宿主上限内）。先交付视频，再说明「这是普通短视频，不是 iPhone 实况照片」。
+5. **动效**：用户确认静帧后，按 `references/motion-prompt.md` 做 **默认 10 秒**短视频（可 6–12，宿主上限内）；只动静帧已有元素，分约五段姿态变化，禁止加原图没有的物件。先交付视频，再说明「这是普通短视频，不是 iPhone 实况照片」。
 6. **路径回传**：同时给出可预览成片与本机完整路径（若已复制到用户电脑）。
 
 ## 输出命名
