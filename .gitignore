@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env*
+*.log
+.private/
+*.private.md
+dist/
+output/
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.mov
+!docs/.gitkeep
