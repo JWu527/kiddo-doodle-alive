@@ -3,7 +3,7 @@ name: kiddo-doodle-alive
 description: Use when a user wants to turn a child's doodle or craft photo into a minimalist cream-paper remake and a short living animation, with naive line preserved, optional name caption, and originals never overwritten.
 license: MIT-0
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   homepage: https://github.com/JWu527/kiddo-doodle-alive
 ---
 
@@ -21,7 +21,7 @@ metadata:
 - 默认**不上传**孩子的画到未授权第三方；只用宿主已具备、用户已授权的本地或平台能力（例如本机图像/视频生成）
 - 不覆盖原图；成片另存同目录，命名清楚
 - 保留孩子原作的构图、比例、颜色倾向与稚拙笔触；不做换脸、虚构角色替换或过度「成人插画化」
-- 英文手写小字只用用户提供的名字；没给名字就用中性标题或先问一句
+- 英文手写小字只用用户提供的昵称，格式 `{nickname}'s {主题}`；未提供昵称前不生成
 
 ## 何时使用
 
@@ -31,6 +31,7 @@ metadata:
 
 ## 工作流（强制）
 
+0. **先问昵称（强制第一步）**：开工前第一句话先问小朋友的英文/拼音昵称（如 Lulu），用于画下方专属手写小字 `{nickname}'s {主题}`，例如 `Lulu's Rainbow`、`Lulu's Kitty`。用户已在本次对话或记忆中给过就直接用并复述确认；用户明确不要署名才省略。
 1. **看原图**：用 Read / 图像工具打开用户照片，用一两句说清画面主体、介质（蜡笔、马克笔、贴纸等）和将做的改动。
 2. **选配方**：默认走 `references/style-recipe.md` 的「极简奶油纸」配方。用户只要静帧就停在第 4 步；要动效再进第 5 步。
 3. **静帧提示词**：按 `references/still-prompt.md` 组装生成提示，把原图路径放进 reference；画幅优先跟原图接近（常见 4:3）。
@@ -40,9 +41,9 @@ metadata:
 
 ## 输出命名
 
-- 静帧：`{名字或主题}_童画活起来.jpg|png`
-- 动效：`{名字或主题}_童画动效.mp4`
-- 可选前后对比：`{名字或主题}_前后对比.jpg`（上原图下成片）
+- 静帧：`{nickname}_{主题}_童画活起来.jpg|png`
+- 动效：`{nickname}_{主题}_童画动效.mp4`
+- 可选前后对比：`{nickname}_{主题}_前后对比.jpg`（上原图下成片）
 
 ## 诚实说明局限
 
